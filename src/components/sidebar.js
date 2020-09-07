@@ -1,6 +1,6 @@
 import React from "react"
 import NavBar from "./navbar"
-import {Button,ButtonGroup,Card} from "react-bootstrap"
+import {Button,Card} from "react-bootstrap"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 const responsive = {
@@ -36,14 +36,14 @@ const responsive = {
         slidesToSlide: 1 // optional, default to 1.
     }
 };
-const CustomButtonGroup = ({ next, previous, goToSlide, carouselState }) => {
+const CustomButtonGroup = ({ next, previous }) => {
     return (
       
-<div class="container">
-<div class="" style={{marginTop:"15px"}}>
-    <div class="col-xs-12 text-md-right lead">
-        <a class="btn btn-outline-secondary prev remove-outline" title="go back" onClick={() => previous()}><i class="fa fa-lg fa-chevron-left"></i></a>
-        <a class="btn btn-outline-secondary next remove-outline" title="more" onClick={() => next()}><i class="fa fa-lg fa-chevron-right"></i></a>
+<div className="container">
+<div className="" style={{marginTop:"15px"}}>
+    <div className="col-xs-12 text-md-right lead">
+        <a className="btn btn-outline-secondary prev remove-outline" title="go back" onClick={() => previous()}><i className="fa fa-lg fa-chevron-left"></i></a>
+        <a className="btn btn-outline-secondary next remove-outline" title="more" onClick={() => next()}><i className="fa fa-lg fa-chevron-right"></i></a>
     </div>
 </div>
 </div>
@@ -111,11 +111,11 @@ const SideBar = () => {
                                 infinite={true}
                                 keyBoardControl={true}
 
-                                containerClass="carousel-container"
+                                containerClassName="carousel-container"
                                 removeArrowOnDeviceType={["tablet", "mobile"]}
 
-                                dotListClass="custom-dot-list-style"
-                                itemClass="carousel-item-padding-40-px"
+                                dotListClassName="custom-dot-list-style"
+                                itemClassName="carousel-item-padding-40-px"
                                 arrows={false}
                                 renderButtonGroupOutside={true} 
                                 customButtonGroup={<CustomButtonGroup />}
@@ -157,11 +157,11 @@ const SideBar = () => {
                                 infinite={true}
                                 keyBoardControl={true}
 
-                                containerClass="carousel-container"
+                                containerClassName="carousel-container"
                                 removeArrowOnDeviceType={["tablet", "mobile"]}
 
-                                dotListClass="custom-dot-list-style"
-                                itemClass="carousel-item-padding-40-px"
+                                dotListClassName="custom-dot-list-style"
+                                itemClassName="carousel-item-padding-40-px"
                                 arrows={false}
                                 renderButtonGroupOutside={true} 
                                 customButtonGroup={<CustomButtonGroup />}
